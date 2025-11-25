@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>خانه | NONA</title>
+
+<!-- فونت کارتونی -->
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+<style>
+/* ریست */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Fredoka One', cursive;
+  background: url('images/nona-background.png') no-repeat center center fixed;
+  background-size: cover;
+  line-height: 1.7;
+  padding-top: 120px;
+}
+
+/* هدر */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 25px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(1px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 200;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.nav-logo {
+  height: 100px; /* لوگوی بزرگ */
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+}
+
+.nav-links a, .lang-btn {
+  padding: 8px 14px;
+  text-decoration: none;
+  border-radius: 10px;
+  background: #ff6f61;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-links a:hover, .lang-btn:hover {
+  background: #ff3b2e;
+}
+
+.lang-btn {
+  margin-left: 10px;
+}
+
+/* باکس محتوا */
+.container {
+  max-width: 900px;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(2px);
+  margin: 40px auto;
+  padding: 35px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.8rem;
+  color: #ff6f61;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+@media (max-width:768px){
+  .nav-links { flex-wrap: wrap; gap:10px; }
+  .nav-logo { height:80px; }
+  h1 { font-size:2rem; }
+  p { font-size:1.1rem; }
+}
+</style>
+</head>
+
+<body>
+<!-- هدر -->
+<header class="navbar">
+  <img src="assets/logo.png" class="nav-logo">
+  <nav class="nav-links">
+    <a href="index-fa.html">خانه</a>
+    <a href="about-fa.html">درباره</a>
+    <a href="tokenomics-fa.html">توکنومیکس</a>
+    <a href="roadmap-fa.html">نقشه راه</a>
+    <a href="buy-fa.html">خرید</a>
+    <button class="lang-btn" onclick="changeLang()">EN</button>
+  </nav>
+</header>
+
+<!-- محتوا -->
+<div class="container">
+  <h1>نونا | توکن منحصر به فرد</h1>
+  <p>نونا یک توکن منحصر به فرد است که بعد از کوچک شدن احتمالا کمیاب خواهد شد و شاید بتوان گفت نوعی سرمایه گذاری برای کودکان باشد.</p>
+  <p>با داشتن نونا، شما در مسیر رشد جامعه و ایجاد فرصت‌های جدید سهیم خواهید بود.</p>
+</div>
+
+<script>
+function changeLang() {
+  window.location.href = 'index-en.html'; // آدرس صفحه انگلیسی
+}
+</script>
+
+</body>
+</html>

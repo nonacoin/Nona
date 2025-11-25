@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>خرید توکن نونا | NONA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- فونت کارتونی -->
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+<style>
+/* ریست */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Fredoka One', cursive;
+  background: url('images/nona-background.png') no-repeat center center fixed;
+  background-size: cover;
+  padding-top: 140px;
+  line-height: 1.8;
+}
+
+/* نوار بالا */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 25px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(1px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  gap: 20px;
+}
+
+.nav-logo-left, .nav-logo-right {
+  height: 140px;
+  position: absolute;
+  top: -20px;
+}
+.nav-logo-left { left: 10px; }
+.nav-logo-right { right: 10px; }
+
+.navbar nav { display: flex; gap: 10px; justify-content: center; }
+
+.navbar nav a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #ff6f61;
+  padding: 8px 10px;
+  transition: all 0.3s;
+}
+.navbar nav a:hover { text-decoration: underline; color: #ff3b2e; }
+
+/* باکس محتوا */
+.section {
+  max-width: 900px;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(2px);
+  margin: 40px auto;
+  padding: 35px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* تیتر */
+h1 { color: #ff6f61; text-align: center; font-size: 2.8rem; margin-bottom: 25px; }
+h2 { color: #ff6f61; font-size: 2rem; margin-top: 30px; margin-bottom: 15px; }
+
+/* متن */
+p { font-size: 1.3rem; margin: 10px 0; }
+
+/* دکمه کپی */
+.copy-box {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.contract-text { font-family: monospace; font-size: 1.1rem; direction: ltr; margin-left: 10px; overflow-wrap: anywhere; }
+.copy-btn {
+  background: #ff6f61;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1rem;
+}
+.copy-btn:hover { background: #ff3b2e; }
+
+/* لینک‌های پایین صفحه */
+.links { margin-top: 25px; text-align: center; }
+.links a {
+  display: inline-block;
+  margin: 8px;
+  background: #ff6f61;
+  padding: 12px 20px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+.links a:hover { background: #ff3b2e; }
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+  .navbar nav a { font-size: 0.95rem; padding: 6px 8px; }
+}
+</style>
+</head>
+<body>
+
+<!-- هدر -->
+<header class="navbar">
+  <img src="assets/logo.png" class="nav-logo-left">
+  <nav>
+    <<a href="index-fa.html">خانه</a>
+    <a href="about-fa.html">درباره</a>
+    <a href="tokenomics-fa.html">توکنومیکس</a>
+    <a href="roadmap-fa.html">نقشه راه</a>
+    <a href="buy-fa.html">خرید</a>
+  </nav>
+  <img src="assets/logo.png" class="nav-logo-right">
+</header>
+
+<section class="section">
+  <h1>خرید / ایردراپ توکن نونا</h1>
+
+  <h2>راهنمای نصب کیف پول و افزودن توکن</h2>
+  <p>جهت دریافت رایگان توکن، ابتدا کیف پول <strong>MetaMask</strong> را از طریق لینک زیر یا از گوگل پلی / اپ استور نصب کنید:</p>
+  <p><a href="https://metamask.io/download/" target="_blank">دانلود MetaMask</a></p>
+
+  <p>پس از نصب، توکن نونا را به کیف پول خود اضافه کنید:</p>
+  <ol>
+    <li>کیف پول MetaMask خود را باز کنید.</li>
+    <li>شبکه Ethereum Mainnet را انتخاب کنید.</li>
+    <li>به بخش «Import Tokens» بروید.</li>
+    <li>اطلاعات توکن را وارد کنید:</li>
+    <ul>
+      <li>Contract Address: <code>0x131746d64B7CF18aF47040fc49137C5896164c45</code></li>
+      <li>Symbol: NONA</li>
+      <li>Decimals: 18</li>
+    </ul>
+  </ol>
+
+  <!-- آدرس قرارداد + دکمه کپی -->
+  <div class="copy-box">
+    <span class="contract-text" id="contract">0x131746d64B7CF18aF47040fc49137C5896164c45</span>
+    <button class="copy-btn" onclick="copyContract()">کپی</button>
+  </div>
+
+  <!-- لینک‌های پایین صفحه -->
+  <div class="links">
+    <a href="index.html">خانه</a>
+    <a href="https://t.me/NonaPortal" target="_blank">کانال تلگرام</a>
+    <a href="https://t.me/NonaCoinbot" target="_blank">ربات ایردراپ</a>
+    <a href="https://etherscan.io/address/0x131746d64B7CF18aF47040fc49137C5896164c45" target="_blank">Etherscan</a>
+  </div>
+</section>
+
+<script>
+function copyContract() {
+  let text = document.getElementById("contract").innerText;
+  navigator.clipboard.writeText(text);
+  alert("آدرس قرارداد کپی شد!");
+}
+</script>
+
+</body>
+</html>

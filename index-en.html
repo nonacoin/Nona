@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | NONA</title>
+
+<!-- Cartoon font -->
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+<style>
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Fredoka One', cursive;
+  background: url('images/nona-background.png') no-repeat center center fixed;
+  background-size: cover;
+  line-height: 1.7;
+  padding-top: 120px;
+}
+
+/* Header */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 25px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(1px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 200;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.nav-logo {
+  height: 100px; /* Big logo */
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+}
+
+.nav-links a, .lang-btn {
+  padding: 8px 14px;
+  text-decoration: none;
+  border-radius: 10px;
+  background: #ff6f61;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-links a:hover, .lang-btn:hover {
+  background: #ff3b2e;
+}
+
+.lang-btn {
+  margin-left: 10px;
+}
+
+/* Content box */
+.container {
+  max-width: 900px;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(2px);
+  margin: 40px auto;
+  padding: 35px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.8rem;
+  color: #ff6f61;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+@media (max-width:768px){
+  .nav-links { flex-wrap: wrap; gap:10px; }
+  .nav-logo { height:80px; }
+  h1 { font-size:2rem; }
+  p { font-size:1.1rem; }
+}
+</style>
+</head>
+
+<body>
+<!-- Header -->
+<header class="navbar">
+  <img src="assets/logo.png" class="nav-logo">
+  <nav class="nav-links">
+    <a href="index-en.html">Home</a>
+    <a href="about-en.html">About</a>
+    <a href="tokenomics-en.html">Tokenomics</a>
+    <a href="roadmap-en.html">Roadmap</a>
+    <a href="buy-en.html">Buy</a>
+    <button class="lang-btn" onclick="changeLang()">FA</button>
+  </nav>
+</header>
+
+<!-- Content -->
+<div class="container">
+  <h1>NONA | Unique Token</h1>
+  <p>NONA is a unique token that, as it diminishes, may become scarce and can be considered a potential investment for children.</p>
+  <p>By holding NONA, you participate in the growth of the community and the creation of new opportunities.</p>
+</div>
+
+<script>
+function changeLang() {
+  window.location.href = 'index.html'; // Redirect to Persian homepage
+}
+</script>
+
+</body>
+</html>

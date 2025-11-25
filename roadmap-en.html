@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Roadmap | NONA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'Fredoka One', cursive;
+  background: url('images/nona-background.png') no-repeat center center fixed;
+  background-size: cover;
+  padding-top: 120px;
+  line-height:1.8;
+}
+
+.navbar {
+  position: fixed;
+  top:0;
+  width:100%;
+  padding:10px 25px;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(1px);
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  z-index:200;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.nav-logo { height:120px; }
+
+.navbar nav { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; }
+
+.navbar nav a {
+  text-decoration:none;
+  font-size:1.1rem;
+  color:#ff6f61;
+  padding:8px 15px;
+  border-radius:8px;
+  transition:0.3s;
+  background: rgba(255,255,255,0.7);
+}
+
+.navbar nav a:hover {
+  background:#ff6f61;
+  color:#fff;
+}
+
+.section { max-width:1000px; margin:40px auto; padding:20px; }
+
+h1 { text-align:center; font-size:3rem; color:#ff6f61; margin-bottom:40px; }
+
+.roadmap { display:flex; flex-direction: column; gap:40px; position:relative; }
+
+.roadmap::after {
+  content:"";
+  position:absolute;
+  left:50%;
+  top:50px;
+  bottom:0;
+  width:4px;
+  background: rgba(255,111,97,0.3);
+  transform: translateX(-50%);
+  z-index:-1;
+}
+
+.phase {
+  position: relative;
+  background: rgba(255,255,255,0.9);
+  border-radius:20px;
+  padding:25px 20px;
+  width:50%;
+  margin-left:auto;
+  margin-right:auto;
+  box-shadow:0 8px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+.phase:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow:0 15px 35px rgba(0,0,0,0.25);
+}
+
+.phase-icon { font-size:3rem; margin-bottom:15px; animation: bounce 2s infinite; }
+
+@keyframes bounce { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
+
+.phase h2 { font-size:1.8rem; color:#ff6f61; margin-bottom:10px; }
+.phase p, .phase ul { font-size:1.2rem; margin:5px 0; }
+.phase ul { list-style-type: disc; margin-left:20px; text-align:left; }
+
+.copy-box { display:flex; align-items:center; justify-content:center; margin-top:25px; background:#fff; padding:10px 15px; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,0.1); }
+.contract-text { font-family:monospace; font-size:1.1rem; direction:ltr; margin-left:10px; overflow-wrap:anywhere; }
+.copy-btn { background:#ff6f61; border:none; padding:10px 15px; border-radius:10px; cursor:pointer; color:#fff; font-size:1rem; }
+.copy-btn:hover { background:#ff3b2e; }
+
+.links { margin-top:25px; text-align:center; }
+.links a { display:inline-block; margin:8px; background:#ff6f61; padding:12px 20px; color:#fff; text-decoration:none; border-radius:12px; }
+.links a:hover { background:#ff3b2e; }
+
+@media (max-width:768px){
+  .phase { width:90%; }
+  h1 { font-size:2.2rem; }
+  .phase h2 { font-size:1.5rem; }
+  .phase p { font-size:1rem; }
+  .nav-logo { height:90px; }
+  .navbar nav a { font-size:1rem; padding:6px 10px; }
+}
+</style>
+</head>
+<body>
+
+<header class="navbar">
+  <img src="assets/logo.png" class="nav-logo">
+  <nav>
+    <a href="index-en.html">Home</a>
+    <a href="about-en.html">About</a>
+    <a href="tokenomics-en.html">Tokenomics</a>
+    <a href="roadmap-en.html">Roadmap</a>
+    <a href="buy-en.html">Buy</a>
+  </nav>
+</header>
+
+<section class="section">
+  <h1>NONA Project Animated Roadmap</h1>
+
+  <div class="roadmap">
+
+    <div class="phase">
+      <div class="phase-icon">🌱</div>
+      <h2>Phase 1 — Nona Creation & Airdrop Prep</h2>
+      <p>The token is designed with an ice pattern: the rarer it gets, the more valuable it becomes.</p>
+      <p>Wallet setup and token addition tutorials completed.</p>
+    </div>
+
+    <div class="phase">
+      <div class="phase-icon">🎁</div>
+      <h2>Phase 2 — Airdrop & User Registration</h2>
+      <p>New users receive <strong>500 tokens</strong>.</p>
+      <p>Invite friends using referral code: <strong>100 tokens</strong> per friend.</p>
+      <p>Users registering with referral also get an extra 25 tokens.</p>
+    </div>
+
+    <div class="phase">
+      <div class="phase-icon">🚀</div>
+      <h2>Phase 3 — Token Listing & Liquidity Management</h2>
+      <ul>
+        <li>After the airdrop, tokens become tradable on exchanges.</li>
+        <li>Tokens are gradually added to liquidity pools to maintain market balance:</li>
+        <li>50% burned and 50% kept for liquidity.</li>
+        <li>Transaction fee: 0.5% burn per trade</li>
+      </ul>
+    </div>
+
+    <div class="phase">
+      <div class="phase-icon">💎</div>
+      <h2>Phase 4 — Long-Term Investment & Transparency</h2>
+      <p>10% of tokens are kept by the creator for at least three years.</p>
+      <p>All updates will be announced via the <strong>official Nona Telegram channel</strong>.</p>
+    </div>
+
+  </div>
+
+  <div class="copy-box">
+    <span class="contract-text" id="contract">0x131746d64B7CF18aF47040fc49137C5896164c45</span>
+    <button class="copy-btn" onclick="copyContract()">Copy</button>
+  </div>
+
+  <div class="links">
+    <a href="https://etherscan.io/address/0x131746d64B7CF18aF47040fc49137C5896164c45" target="_blank">Etherscan</a>
+    <a href="https://t.me/NonaPortal_E" target="_blank">Telegram Channel</a>
+    <a href="https://t.me/NonaCoinbot" target="_blank">Airdrop Bot</a>
+  </div>
+
+</section>
+
+<script>
+function copyContract(){
+  let text = document.getElementById("contract").innerText;
+  navigator.clipboard.writeText(text);
+  alert("Contract address copied!");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>Tokenomics | NONA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Cartoon font -->
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Fredoka One', cursive;
+  background: url('images/nona-background.png') no-repeat center center fixed;
+  background-size: cover;
+  padding-top: 140px;
+  line-height: 1.8;
+}
+
+/* Header */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 25px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(1px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  gap: 20px;
+}
+
+.nav-logo-left, .nav-logo-right {
+  height: 140px;
+  position: absolute;
+  top: -20px;
+}
+
+.nav-logo-left { left: 10px; }
+.nav-logo-right { right: 10px; }
+
+.navbar nav {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #ff6f61;
+  padding: 8px 10px;
+  transition: all 0.3s;
+}
+
+.navbar nav a:hover {
+  text-decoration: underline;
+  color: #ff3b2e;
+}
+
+/* Content box */
+.section {
+  max-width: 850px;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(2px);
+  margin: 40px auto;
+  padding: 35px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+h2 {
+  color: #ff6f61;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+p {
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+
+.copy-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contract-text {
+  font-family: monospace;
+  font-size: 1.1rem;
+  direction: ltr;
+  margin-left: 10px;
+  overflow-wrap: anywhere;
+}
+
+.copy-btn {
+  background: #ff6f61;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.copy-btn:hover {
+  background: #ff3b2e;
+}
+
+.links {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.links a {
+  display: inline-block;
+  margin: 8px;
+  background: #ff6f61;
+  padding: 12px 20px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+
+.links a:hover {
+  background: #ff3b2e;
+}
+
+@media (max-width: 768px) {
+  .navbar nav a {
+    font-size: 0.95rem;
+    padding: 6px 8px;
+  }
+}
+</style>
+</head>
+<body>
+
+<header class="navbar">
+  <img src="assets/logo.png" class="nav-logo-left">
+  <nav>
+    <a href="index-en.html">Home</a>
+    <a href="about-en.html">About</a>
+    <a href="tokenomics-en.html">Tokenomics</a>
+    <a href="roadmap-en.html">Roadmap</a>
+    <a href="buy-en.html">Buy</a>
+  </nav>
+  <img src="assets/logo.png" class="nav-logo-right">
+</header>
+
+<section class="section">
+  <h2>Tokenomics</h2>
+
+  <p>Token Name: NONA</p>
+  <p>Symbol: NONA</p>
+  <p>Total Supply: 1,000,000,000 NONA</p>
+  <p>Network: Ethereum</p>
+  <p>Standard: ERC-20</p>
+  <p>Decimals: 18</p>
+  <p>Transaction Burn: 0.5%</p>
+  <p>Mint Capability: None</p>
+  <p>Contract Ownership: Renounced</p>
+  <p>Type: Deflationary Token</p>
+
+  <div class="copy-box">
+    <span class="contract-text" id="contract">
+      0x131746d64B7CF18aF47040fc49137C5896164c45
+    </span>
+    <button class="copy-btn" onclick="copyContract()">Copy</button>
+  </div>
+
+  <div class="links">
+    <a href="https://etherscan.io/address/0x131746d64B7CF18aF47040fc49137C5896164c45" target="_blank">Etherscan</a>
+    <a href="https://t.me/NonaPortal_E" target="_blank">Telegram Channel</a>
+    <a href="https://t.me/NonaCoinbot" target="_blank">Airdrop Bot</a>
+  </div>
+</section>
+
+<script>
+function copyContract() {
+  let text = document.getElementById("contract").innerText;
+  navigator.clipboard.writeText(text);
+  alert("Contract address copied!");
+}
+</script>
+
+</body>
+</html>
