@@ -1,0 +1,10 @@
+
+body { font-family: sans-serif; direction: rtl; background:#0fb64d; color:#fff; margin:0; }
+.navbar { display:flex; justify-content:space-between; align-items:center; padding:15px 25px; background:#0a8f3a; }
+.navbar a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; }
+.nav-logo { width:60px; }
+.hero { text-align:center; padding:60px 20px; }
+.hero-logo { width:150px; }
+.frog-btn { display:inline-block; background:#0a8f3a; padding:12px 20px; margin:8px; border-radius:12px;
+color:#fff; text-decoration:none; font-weight:bold; }
+.section { max-width:700px; margin:40px auto; background:#11a348; padding:25px; border-radius:15px; text-align:center; }

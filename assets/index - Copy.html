@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>خانه - توکن نونا</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+body {
+    font-family: 'Fredoka One', cursive;
+    text-align: right;
+    line-height: 1.7;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* بک‌گراند */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: 
+      linear-gradient(135deg, rgba(255,154,158,0.5), rgba(250,208,196,0.5)),
+      url('images/nona-background.png') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+}
+
+/* هدر و لوگو */
+.site-header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* راست چین */
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    background: rgba(255,255,255,0.8);
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.logo {
+    height: 50px;
+}
+
+/* container اصلی */
+.container {
+    max-width: 1000px;
+    margin-top: 100px; /* فضای بالای هدر */
+    padding: 20px 40px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+}
+
+/* عناوین و متن */
+h1 { text-align: center; font-size: 3rem; color: #ff6f61; margin-bottom: 20px; }
+p { font-size: 1.2rem; margin-bottom: 15px; }
+
+/* کارت ویژگی‌ها */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.feature-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    flex: 1 1 200px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.feature-card h3 { color: #ff6f61; margin-bottom: 10px; }
+.feature-card p { font-size: 1rem; }
+
+/* آیکن‌های لینک‌ها */
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+.links a img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.2s;
+}
+.links a img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* دکمه‌ها / شبکه‌ها */
+.buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 25px;
+}
+.buttons a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: #ff6f61;
+    color: white;
+    font-weight: bold;
+}
+.buttons a:hover {
+    background: #ff4c3b;
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+    h1 { font-size: 2.2rem; }
+    p { font-size: 1.1rem; }
+    .container { padding: 20px; }
+    .feature-card { flex: 1 1 100%; }
+    .links a img { width: 40px; height: 40px; }
+}
+</style>
+</head>
+<body>
+    <header class="site-header">
+        <img src="images/nona-logo.png" alt="لوگوی نونا" class="logo">
+    </header>
+
+    <div class="container">
+        <h1>⭐ توکن نونا</h1>
+        <p>نونا یک توکن منحصر به فرد با هدف رشد جامعه و ایجاد فرصت‌های جدید است. اخبار و ایردراپ‌ها از طریق کانال تلگرام منتشر می‌شود.</p>
+
+        <h2>ویژگی‌های نونا</h2>
+        <div class="features">
+            <div class="feature-card">
+                <h3>تعداد کل</h3>
+                <p>1,000,000,000,000 توکن</p>
+            </div>
+            <div class="feature-card">
+                <h3>سوزاندن خودکار</h3>
+                <p>هر تراکنش کمی توکن‌ها را می‌سوزاند</p>
+            </div>
+            <div class="feature-card">
+                <h3>جامعه فعال</h3>
+                <p>اعضای جامعه رشد نونا را پشتیبانی می‌کنند</p>
+            </div>
+            <div class="feature-card">
+                <h3>شفافیت قرارداد</h3>
+                <p>تمام تراکنش‌ها در بلاک‌چین قابل مشاهده است</p>
+            </div>
+        </div>
+
+        <h2>لینک‌های مهم</h2>
+        <div class="links">
+            <!-- CoinMarketCap -->
+            <a href="https://coinmarketcap.com/currencies/nona/" target="_blank">
+                <img src="images/cmc-icon.png" alt="CoinMarketCap">
+            </a>
+            <!-- Etherscan -->
+            <a href="https://etherscan.io/address/0x131746d64B7CF18aF47040fc49137C5896164c45" target="_blank">
+                <img src="images/etherscan-icon.png" alt="Etherscan">
+            </a>
+            <!-- Uniswap / Wallet Connect -->
+            <a href="#" onclick="alert('Wallet Connect / Uniswap placeholder'); return false;">
+                <img src="images/uniswap-icon.png" alt="Uniswap">
+            </a>
+            <!-- Telegram -->
+            <a href="https://t.me/your_channel" target="_blank">
+                <img src="images/telegram-icon.png" alt="Telegram">
+            </a>
+        </div>
+
+        <div class="buttons">
+            <a href="about-fa.html">درباره نونا</a>
+        </div>
+    </div>
+</body>
+</html>
